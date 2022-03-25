@@ -20,7 +20,7 @@
     <div class="container">
       <img src="./img/logo.svg" alt="Blogr logo">
 
-      <button class="mobile-nav-toggle" aria-controls="navbar"><span class="sr-only" aria-expanded="false">Menu</span></button>
+      <button class="mobile-nav-toggle" aria-controls="navbar"><span class="sr-only" aria-expanded="false" role="mobile-nav-toggle">Menu</span></button>
 
       <nav id="navbar" data-visible="false">
         <ul>
@@ -60,7 +60,7 @@
     
   <main id="main">
 
-    <section id="slider">
+    <section id="slider" tabindex="0">
       <h1>A modern publishing platform</h1>
       <p>Grow your audience and build your online brand</p>
       
@@ -170,8 +170,8 @@
       
       <h2>Login with your account</h2>
       <form id="loginForm" action="javascript:void(0)">
-        <input type="email" name="email" id="email" placeholder="Your Email" required>
-        <input type="password" name="password" id="password" placeholder="Your Password" required>
+        <input type="email" name="emailLogin" id="emailLogin" placeholder="Your Email" required>
+        <input type="password" name="passwordLogin" id="passwordLogin" placeholder="Your Password" required>
         <button type="submit" class="btn-cta">Login</button>
       </form>
       
@@ -196,9 +196,9 @@
       
       <h2>Sign Up now!</h2>
       <form id="signUpForm" action="javascript:void(0)">
-        <input type="text" name="username" id="username" placeholder="Your Username" required>
-        <input type="email" name="email" id="email" placeholder="Your Email" required>
-        <input type="password" name="password" id="password" placeholder="Your Password" required>
+        <input type="text" name="usernameSignUp" id="usernameSignUp" placeholder="Your Username" required>
+        <input type="email" name="emailSignUp" id="emailSignUp" placeholder="Your Email" required>
+        <input type="password" name="passwordSignUp" id="passwordSignUp" placeholder="Your Password" required>
         <button type="submit" class="btn-cta">Sign Up</button>
       </form>
       
