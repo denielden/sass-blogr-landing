@@ -1,3 +1,12 @@
+// preload
+(() => {
+   if (window.addEventListener) {
+      window.addEventListener('load', () => document.querySelector('#preload').style.display = 'none', false);
+   } else {
+      window.attachEvent('onload', () => document.querySelector('#preload').style.display = 'none');
+   }
+})();
+
 // navbar
 const navToggle = document.querySelector('.mobile-nav-toggle'),
       nav = document.querySelector('#navbar'),
