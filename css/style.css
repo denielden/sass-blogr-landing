@@ -436,6 +436,11 @@ section {
   overflow-x: clip;
 }
 
+.er-404 #slider {
+  min-height: 70vh;
+  border-bottom-left-radius: 0;
+}
+
 #slider {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -545,6 +550,10 @@ section {
     width: clamp(100%, 150%, 200%);
     left: clamp(-30%, -55%, -80%);
   }
+}
+
+.er-404 footer {
+  border-top-right-radius: 0;
 }
 
 footer {
