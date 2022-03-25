@@ -1,0 +1,139 @@
+header
+   position: fixed
+   width: 100%
+   padding-block: $sm
+   color: $white
+   transition: all .6s ease-in-out
+   z-index: 999
+
+   .container
+      grid-template-columns: $lg 1fr
+
+      img
+         width: $w-logo
+
+
+.mobile-nav-toggle
+   display: block
+   position: absolute
+   right: 1rem
+   top: 2rem
+   background: transparent
+   background-image: url(../img/icon-hamburger.svg)
+   background-repeat: no-repeat
+   background-position: center
+   width: 1.5rem
+   padding: $xs
+   border-radius: 0
+   aspect-ratio: 1
+   z-index: 2000
+   &[aria-expanded="true"]
+      background-image: url(../img/icon-close.svg)
+   @include tablet
+      display: none
+
+
+nav#navbar
+   @include flex
+   position: fixed
+   top: 6.35rem
+   width: calc(100% - #{$xs} * 2)
+   padding: $xs
+   border-radius: .3rem
+   background-color: $white
+   @include rotateX-90
+   z-index: 1000
+   &[data-visible="true"]
+      transform: rotateX(0)
+   @include only-mobile
+      @include shadow
+
+   ul
+      text-align: center
+      @include only-mobile
+         width: 100%
+
+      li
+         display: block
+         padding-top: 1rem
+         &.has-submenu
+            > a
+               &::after
+                  content: url(../img/icon-arrow-dark.svg)
+                  display: inline-block
+                  padding-left: .5rem
+                  transition: all .5s ease-in-out
+            &.open
+               > a
+                  &::after
+                     transform: rotate(180deg)
+                     padding-right: .5rem
+               ul.submenu
+                  display: block
+
+         a
+            color: $dark-blue
+      
+         ul.submenu
+            display: none
+            padding: 1rem
+            margin-top: 1rem
+            border-radius: .3rem
+            background-color: $grayish
+            animation: fadeIn .5s ease-in
+
+            li
+               display: block
+               padding-block: .5rem
+               padding-left: 0
+
+               a
+                  text-decoration: none
+
+   @include only-mobile
+      .account
+         display: flex
+         flex-direction: column
+         width: 100%
+         border-top: .1rem solid $grayish
+         margin-top: $xs
+
+         button
+            color: $dark-blue
+            width: max-content
+            margin: .8rem auto
+            &.btn-cta
+               background: $red-gradient
+               color: $white
+               margin-top: 0
+
+   @include tablet
+      justify-content: space-between
+      flex-direction: row
+      position: relative
+      top: 0
+      padding: 0
+      background-color: transparent
+      transform: rotateX(0)
+
+      ul
+         text-align: left
+
+         li
+            display: inline-block
+            padding-right: $sm
+            padding-top: 0
+            &.has-submenu
+               > a
+                  color: $white
+                  &::after
+                     content: url(../img/icon-arrow-light.svg)
+               &.open
+                  ul.submenu
+                     position: absolute
+
+            ul.submenu
+               min-width: 10rem
+               margin-top: 2.55rem
+               background-color: $white
+               @include shadow

@@ -1,0 +1,20 @@
+footer
+   padding-block: $md $lg
+   background-color: $dark
+   border-top-right-radius: $md
+
+   .container
+      gap: $sm
+      @include tablet
+         grid-template-columns: repeat(4, 1fr)
+         place-items: start
+
+      img
+         width: $w-logo
+      
+      li
+         a
+            font-family: $body-font
+            color: $grayish
+            &:hover
+               font-weight: 400

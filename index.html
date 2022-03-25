@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Deniel Den">
+  <link rel="shortcut icon" href="https://denielden.github.io/img/favicon.svg" type="image/svg+xml">
+  <title>Blogr Landing by denie/den | Frontend Mentor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-to-content">Skip to content</a>
+
+  <header>
+    <div class="container">
+      <img src="./img/logo.svg" alt="Blogr logo">
+
+      <button class="mobile-nav-toggle" aria-controls="navbar"><span class="sr-only" aria-expanded="false">Menu</span></button>
+
+      <nav id="navbar" data-visible="false">
+        <ul>
+          <li class="has-submenu"><a href="#" title="Product">Product</a>
+            <ul class="submenu">
+              <li><a href="#" title="Overview">Overview</a></li>
+              <li><a href="#" title="Pricing">Pricing</a></li>
+              <li><a href="#" title="Marketplace">Marketplace</a></li>
+              <li><a href="#" title="Features">Features</a></li>
+              <li><a href="#" title="Integrations">Integrations</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu"><a href="#" title="Company">Company</a>
+            <ul class="submenu">
+              <li><a href="#" title="About">About</a></li>
+              <li><a href="#" title="Team">Team</a></li>
+              <li><a href="#" title="Blog">Blog</a></li>
+              <li><a href="#" title="Careers">Careers</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu"><a href="#" title="Connect">Connect</a>
+            <ul class="submenu">
+              <li><a href="#" title="Contact">Contact</a></li>
+              <li><a href="#" title="Newsletter">Newsletter</a></li>
+              <li><a href="#" title="LinkedIn">LinkedIn</a></li>
+            </ul>
+          </li>
+        </ul>        
+        <div class="account">
+          <button id="login">Login</button>
+          <button class="btn-cta" id="signUp">Sign Up</button>
+        </div>
+      </nav>
+
+    </div>
+  </header>
+    
+  <main id="main">
+
+    <section id="slider">
+      <h1>A modern publishing platform</h1>
+      <p>Grow your audience and build your online brand</p>
+      
+      <div class="flex">
+        <button class="btn-cta">Start for Free</button>
+        <button class="btn-border">Learn More</button>
+      </div>
+    </section>
+
+    <section id="introducing">
+      <div class="container">
+
+        <h1>Designed for the future</h1>
+
+        <picture class="order-md-2">
+          <source media="(min-width: 55em)" srcset="./img/illustration-editor-desktop.svg">
+          <img src="./img/illustration-editor-mobile.svg" alt="Designed for the future: extensible editor">
+        </picture>
+
+        <div>
+          <h2>Introducing an extensible editor</h2>
+          <p class="mb-4">Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog.</p>
+          
+          <h2>Robust content management</h2>
+          <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
+        </div>
+
+      </div>
+    </section>
+      
+    <section id="state-art">
+      <div class="container">
+        
+        <img src="./img/illustration-phones.svg" alt="State of the Art Infrastructure">
+
+        <div>
+          <h1>State of the Art Infrastructure</h1>
+          <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+        </div>
+          
+      </div>
+    </section>
+
+    <section id="powerful">
+      <div class="container">
+
+        <picture>
+          <source media="(min-width: 55em)" srcset="./img/illustration-laptop-desktop.svg">
+          <img src="./img/illustration-laptop-mobile.svg" alt="Laptop powerful tooling">
+        </picture>
+
+        <div>
+          <h2>Free, open, simple</h2>
+          <p class="mb-4">Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+          
+          <h2>Powerful tooling</h2>
+          <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <img src="./img/logo.svg" alt="Blogr logo">
+
+      <div>
+        <h3>Product</h3>
+        <ul>
+          <li><a href="#" title="Overview">Overview</a></li>
+          <li><a href="#" title="Pricing">Pricing</a></li>
+          <li><a href="#" title="Marketplace">Marketplace</a></li>
+          <li><a href="#" title="Features">Features</a></li>
+          <li><a href="#" title="Integrations">Integrations</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#" title="About">About</a></li>
+          <li><a href="#" title="Team">Team</a></li>
+          <li><a href="#" title="Blog">Blog</a></li>
+          <li><a href="#" title="Careers">Careers</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="#" title="Contact">Contact</a></li>
+          <li><a href="#" title="Newsletter">Newsletter</a></li>
+          <li><a href="#" title="LinkedIn">LinkedIn</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <div id="loginModal">
+    <div class="modal">
+      <span class="close-modal">x</span>
+      <img src="./img/logo.svg" alt="Blogr logo">
+      
+      <h2>Login with your account</h2>
+      <form id="loginForm" action="javascript:void(0)">
+        <input type="email" name="email" id="email" placeholder="Your Email" required>
+        <input type="password" name="password" id="password" placeholder="Your Password" required>
+        <button type="submit" class="btn-cta">Login</button>
+      </form>
+      
+      <p>or continue</p>
+      <button class="btn-border">
+        with <strong>Google</strong>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
+      </button>
+      <button class="btn-border">
+        with <strong>Facebook</strong>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+      </button>
+      
+      <small>Don't have an account? <a href="javascript:void(0)" id="changeSignUp">Sign up</a></small>
+    </div>
+  </div>
+
+  <div id="signUpModal">
+    <div class="modal">
+      <span class="close-modal">x</span>
+      <img src="./img/logo.svg" alt="Blogr logo">
+      
+      <h2>Sign Up now!</h2>
+      <form id="signUpForm" action="javascript:void(0)">
+        <input type="text" name="username" id="username" placeholder="Your Username" required>
+        <input type="email" name="email" id="email" placeholder="Your Email" required>
+        <input type="password" name="password" id="password" placeholder="Your Password" required>
+        <button type="submit" class="btn-cta">Sign Up</button>
+      </form>
+      
+      <p>or Sign Up</p>
+      <button class="btn-border">
+        with <strong>Google</strong>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
+      </button>
+      <button class="btn-border">
+        with <strong>Facebook</strong>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+      </button>
+      
+      <small>Already have an account? <a href="javascript:void(0)" id="changeLogin">Login</a></small>
+    </div>
+  </div>
+
+
+  <button id="goTop" title="Scrool to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 450"><path d="M168.5 164.2l148 146.8c4.7 4.7 4.7 12.3 0 17l-19.8 19.8c-4.7 4.7-12.3 4.7-17 0L160 229.3 40.3 347.8c-4.7 4.7-12.3 4.7-17 0L3.5 328c-4.7-4.7-4.7-12.3 0-17l148-146.8c4.7-4.7 12.3-4.7 17 0z"></path></svg>
+  </button>
+
+  <div class="attribution">
+    <p>
+      Challenge by <a href="https://www.frontendmentor.io">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/denielden" title="Deniel Den">denie/den</a> 😎.
+    </p>
+  </div>
+
+  <script src="./js/main.js" defer></script>
+</body>
+</html>

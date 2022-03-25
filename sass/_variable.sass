@@ -1,0 +1,44 @@
+$white: hsl(0, 0%, 100%)
+$dark: hsl(240, 10%, 16%)         // footer bg
+$red: hsl(356, 100%, 66%)         // CTA text
+$light-red: hsl(355, 100%, 74%)   // CTA hover bg
+$dark-blue: hsl(208, 49%, 24%)    // headings
+$grayish-blue: hsl(207, 13%, 34%) // body text
+$grayish: hsl(240, 2%, 79%)       // footer text
+$red-gradient: linear-gradient(45deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%) 80%)
+$red-gradient-sm: linear-gradient(150deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%) 80%)
+$blue-gradient: linear-gradient(45deg, hsl(237, 17%, 21%) 30%, hsl(237, 23%, 32%))
+
+$body-font: 'Overpass', sans-serif
+$heading-font: 'Ubuntu', sans-serif
+
+$w-logo: 6rem
+
+$xs: 1.2rem
+$sm: 2rem
+$md: 4rem
+$lg: 6rem
+
+$breakPoint: 55em
+
+@mixin flex
+   display: flex
+   justify-content: center
+   align-items: center
+   flex-direction: column
+
+@mixin shadow
+   box-shadow: 0 .8rem 2rem rgba(37, 37, 45, .3)
+
+@mixin rotateX-90
+   transform: rotateX(90deg)
+   transform-origin: top
+   transition: all .5s ease-in-out
+
+@mixin only-mobile
+   @media (max-width: #{$breakPoint} )
+      @content
+
+@mixin tablet
+   @media (min-width: #{$breakPoint} )
+      @content

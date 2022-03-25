@@ -1,0 +1,75 @@
+*
+   padding: 0
+   margin: 0
+   border: 0
+   outline: none
+   list-style: none
+   box-sizing: border-box
+
+::-webkit-scrollbar
+	width: .7rem
+::-webkit-scrollbar-track
+	background: $dark
+::-webkit-scrollbar-thumb
+	background: $light-red
+	border-radius: 1rem
+
+html
+	scrollbar-width: thin
+	scrollbar-color: $light-red $dark
+	scroll-behavior: smooth
+
+body
+   position: relative
+   background-color: $white
+   scroll-behavior: smooth
+
+img
+   width: 100%
+
+.container
+   display: grid
+   grid-template-columns: 1fr
+   place-items: center
+   gap: $md
+   max-width: 90rem
+   padding-inline: $xs
+   text-align: center
+
+.flex
+   display: flex
+   gap: 1rem
+   
+.mb-4
+   margin-bottom: $md
+
+.sr-only
+  position: absolute
+  width: 1px
+  height: 1px
+  padding: 0
+  margin: -1px
+  overflow: hidden
+  clip: rect(0,0,0,0)
+  white-space: nowrap
+  border: 0
+
+.skip-to-content
+   position: absolute
+   z-index: 9999
+   background: $white
+   padding: .5em 1em
+   margin-inline: auto
+   transform: translateY(-100%)
+   transition: transform 250ms ease-in
+   &:focus
+      transform: translateY(0)
+
+@include tablet
+   .container
+      grid-template-columns: repeat(2, 1fr)      
+      margin-inline: auto
+      text-align: left
+
+   .order-md-2
+      order: 2

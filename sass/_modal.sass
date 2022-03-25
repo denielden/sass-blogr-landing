@@ -1,0 +1,79 @@
+#loginModal, #signUpModal
+   display: none
+   width: 100%
+   height: 100%
+   position: absolute
+   inset: 0
+   background-color: rgba(255,255,255,.8)
+   animation: fadeIn .5s ease-in
+   z-index: 9999
+   &.open
+      display: block
+
+.modal
+   position: fixed
+   top: 50%
+   left: 50%
+   transform: translate(-50%, -50%)
+   max-width: 28rem
+   min-width: 21rem
+   padding: $sm
+   text-align: center
+   color: $white
+   background: $blue-gradient
+   border-radius: $xs
+   transition: all .8s ease
+   animation: fadeIn 1s ease-in
+   @include shadow
+
+   .close-modal
+      position: absolute
+      top: 0
+      right: 0
+      padding: $xs
+      font-weight: 600
+      font-size: 1.5rem
+      color: $white
+      cursor: pointer
+
+   img
+      width: $w-logo
+      padding-block: $sm
+   
+   h2
+      color: $red
+
+   form
+      > *
+         margin-bottom: .8rem
+
+      input
+         width: 100%
+         background: rgba(255,255,255,.95)
+         padding: .8rem $xs
+         border-radius: $sm
+         font-family: $body-font
+         
+      label
+         float: left
+   p
+      margin-block: $sm
+
+   button
+      @include flex
+      flex-direction: row
+      gap: .5rem
+      width: 100%
+      margin-bottom: .5rem
+      &:hover
+         svg
+            fill: $red
+
+      &.btn-cta
+         background: $red-gradient
+         color: $white
+
+      svg
+         fill: $white
+         height: $xs
+         transition: fill .6s

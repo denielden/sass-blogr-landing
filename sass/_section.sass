@@ -1,0 +1,85 @@
+section
+   padding-block: $md
+   overflow-x: clip
+
+#slider
+   @include flex
+   gap: $sm
+   height: clamp(28rem, 65vh, 86vh)
+   padding-inline: 2.4rem
+   border-bottom-left-radius: $md
+   background-image: url(../img/bg-pattern-intro-mobile.svg), $red-gradient-sm
+   background-size: 355%, auto
+   background-position: 34% 32%, center
+   background-repeat: no-repeat
+   text-align: center
+   color: $white
+
+   h1
+      font-size: $sm
+      color: $white
+      margin-top: $sm
+      margin-bottom: 0
+
+   div
+      margin-top: $xs
+
+      button
+         padding-inline: $xs
+
+   @include only-mobile
+      min-height: 80vh
+
+   @include tablet
+      background-image: url(../img/bg-pattern-intro-desktop.svg), $red-gradient
+      background-size: 184%, auto
+      background-position: 6% center, center
+      h1
+         font-size: 3.5rem
+
+#state-art
+   color: $white
+   background-image: url(../img/bg-pattern-circles.svg), $blue-gradient
+   background-position: center 245%, center
+   background-size: 160%, auto
+   background-repeat: no-repeat
+   border-top-right-radius: $md
+   border-bottom-left-radius: $md
+   margin-top: 10rem
+   margin-bottom: 0
+
+   .container
+      gap: $sm
+
+      img
+         margin-top: -15rem
+
+      h1
+         font-size: $sm
+         color: $white
+
+   @include tablet
+      background-position: 15% 85%, center
+      background-size: auto
+      margin-block: 0
+
+      .container
+         img
+            margin-top: -9rem
+            margin-bottom: -12rem
+
+
+@include tablet
+   section#introducing
+      h1
+         grid-column: span 2
+         margin-bottom: -5rem
+
+      picture
+         right: clamp(-30%, -55%, -80%)
+         left: unset
+
+   picture
+      position: relative
+      width: clamp(100%, 150%, 200%)
+      left: clamp(-30%, -55%, -80%)

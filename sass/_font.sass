@@ -1,0 +1,52 @@
+body
+   font-family: $body-font
+   font-size: 1rem
+   font-weight: 400
+   line-height: 1.5
+   color: $grayish-blue
+
+h1, h2, h3
+   font-family: $heading-font
+   color: $dark-blue
+   margin-bottom: $xs
+h1
+   font-size: 1.8rem
+   font-weight: 400
+h2
+   font-size: 1.6rem
+   font-weight: 500
+h3
+   font-size: 1.3rem
+   font-weight: 600
+   color: $white
+
+@include tablet
+   h1
+      font-size: 2.5rem
+   h2
+      font-size: 1.6rem
+      font-weight: 600
+   h3
+      font-weight: 700
+
+a
+   font-family: $heading-font
+   color: $red
+   font-weight: 500
+   text-decoration: none
+   transition: all 1s ease-in
+   &:hover
+      font-weight: 700
+      text-decoration: underline
+      
+button
+   font-family: $heading-font
+   font-size: 1rem
+   font-weight: 700
+   color: $white
+
+footer
+   font-size: $xs
+   font-weight: 500
+   line-height: 1.8
+   color: $grayish
