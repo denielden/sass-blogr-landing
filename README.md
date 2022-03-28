@@ -58,7 +58,10 @@ I added **Login and Sign Up** modals and initially had problems with centering b
 
 ### Continued development
 
-In adding modals, however, I was unable to remove that tremendous positioning effect you notice when modals are opened and centered on the screen. Open to feedback on how to fix it :)
+I would like to make sure that when floating menu and submenus are open but are ignored or clicked outside they close by themselves.  
+Also I could not understand why if I assign a `click` event to the white background under the Login and Sign Up modals when they are open the close function of the modals is performed even if you click in the input or inside the modal. 
+
+Open to feedback on how to fix it :)
 
 ## Author
 
