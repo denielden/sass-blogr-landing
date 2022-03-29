@@ -58,9 +58,7 @@ I added **Login and Sign Up** modals and initially had problems with centering b
 
 ### Continued development
 
-I would like to make sure that when floating menu and submenus are open but are ignored or clicked outside they close by themselves.  
-Also I could not understand why if I assign a `click` event to the white background under the Login and Sign Up modals when they are open the close function of the modals is performed even if you click in the input or inside the modal. 
-
+I could not understand why if I assign a `click` event to the white background under the Login and Sign Up modals when they are open the close function of the modals is performed even if you click in the input or inside the modal.  
 Open to feedback on how to fix it :)
 
 ## Author
@@ -68,7 +66,7 @@ Open to feedback on how to fix it :)
 - Website - [denielden](https://denielden.github.io)
 - Frontend Mentor - [@denielden](https://www.frontendmentor.io/profile/denielden)
 
-  
+A special thanks goes to @christopher-adolphe who, thanks to his feedback, has allowed me to understand how to make sure that when the mobile menu and submenus are open they close by themselves if ignored or if clicked outside them.  
 Thank you for taking the time to check out my project!
 
 ## **Have fun building!** 🚀

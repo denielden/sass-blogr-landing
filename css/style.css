@@ -226,7 +226,7 @@ button#goTop {
   bottom: 7rem;
   background: linear-gradient(45deg, #ff8f70, #ff3d54 80%);
   padding: .2rem .6rem;
-  z-index: 1000;
+  z-index: 99;
 }
 
 button#goTop svg {

@@ -10,7 +10,32 @@
 // navbar
 const navToggle = document.querySelector('.mobile-nav-toggle'),
       nav = document.querySelector('#navbar'),
-      submenuLi = document.querySelectorAll('li.has-submenu');
+      menu = document.querySelector('#menu'),
+      mobileBreakPoint = 879;
+
+const openSubmenu = e => {
+   e.preventDefault();
+   const parentMenu = e.target.parentNode,
+         activeParentMenu = document.querySelector('li.has-submenu.open');
+
+   if(parentMenu.classList.contains('open')) {
+      parentMenu.classList.remove('open');
+      return
+   }
+
+   if(activeParentMenu) activeParentMenu.classList.remove('open');
+
+   parentMenu.classList.add('open');
+}
+
+const dismissSubMenu = () => {
+   const viewportWidth = window.innerWidth,
+         activeParentMenu = document.querySelector('li.has-submenu.open');
+
+   if(activeParentMenu && viewportWidth > mobileBreakPoint) {
+      activeParentMenu.classList.remove('open');
+   }
+}
 
 navToggle.addEventListener('click', () => {
    const visible = nav.getAttribute('data-visible');
@@ -20,23 +45,14 @@ navToggle.addEventListener('click', () => {
    } else {
       nav.setAttribute('data-visible', false);
       navToggle.setAttribute('aria-expanded', false);
+      
+      const activeParentMenu = document.querySelector('li.has-submenu.open');
+      if(activeParentMenu) activeParentMenu.classList.remove('open');
    }
 });
 
-const openSubmenu = e => {
-   e.preventDefault();
-   const ele = e.target;
-
-   if(ele.parentNode.classList.contains('open')) {
-      ele.parentNode.classList.remove('open');
-      return
-   }
-
-   submenuLi.forEach(li => li.classList.remove('open'));
-   if(ele.nodeName !== "A" || !ele.parentNode.className.includes('has-submenu')) return
-   ele.parentNode.classList.toggle('open');
-}
-submenuLi.forEach(li => li.addEventListener('click', openSubmenu));
+menu.addEventListener('click', openSubmenu);
+menu.addEventListener('focusout', dismissSubMenu);
 
 // scrool nav and goTop btn
 const header = document.querySelector('header'),
