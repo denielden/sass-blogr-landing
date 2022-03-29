@@ -23,7 +23,9 @@ const openSubmenu = e => {
       return
    }
 
-   if(activeParentMenu) activeParentMenu.classList.remove('open');
+   if(activeParentMenu) {
+      activeParentMenu.classList.remove('open');
+   }
 
    parentMenu.classList.add('open');
 }
@@ -47,7 +49,9 @@ navToggle.addEventListener('click', () => {
       navToggle.setAttribute('aria-expanded', false);
       
       const activeParentMenu = document.querySelector('li.has-submenu.open');
-      if(activeParentMenu) activeParentMenu.classList.remove('open');
+      if(activeParentMenu) {
+         activeParentMenu.classList.remove('open');
+      }
    }
 });
 
